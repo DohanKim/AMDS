@@ -1,0 +1,23 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>sign Up</h1>
+        <form action="{{ path_for('user.postSignUp') }}" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+    </body>
+</html>
+        

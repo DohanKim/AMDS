@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>sign in</h1>
+        <form action="{{ path_for('user.postSignIn') }}" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <button type="submit">Sign in</button>
+        </form>
+    </body>
+</html>
+        
