@@ -25,6 +25,8 @@ final class UserController extends BaseController
         $this->em->flush();
 
         return $response->withJson(['success' => true], 201);
+
+        // Redirect to Verification page
     }
 
     public function getSignIn(Request $request, Response $response, $args)
@@ -47,5 +49,18 @@ final class UserController extends BaseController
         else {
             return $response->withJson(['success' => false]);
         }
+    }
+
+    public function getActivation(Request $request, Response $response, $args)
+    {
+        $params = $request->getParams();
+        // if not verified yet
+        $this->view->render($response, 'user/activation.twig');
+
+        // if already verified : redirect
+    }
+
+    public function postActivation(Request $request, Response $response, $args)
+    {
     }
 }

@@ -1,0 +1,15 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Activation</h1>
+        <form action="{{ path_for('user.postActivation') }}" method="post">
+            <div class="form-group">
+                <label for="code">Verification Code</label>
+                <input type="text" name="code" id="code">
+            </div>
+            <button type="submit">Activate</button>
+        </form>
+    </body>
+</html>
+        
